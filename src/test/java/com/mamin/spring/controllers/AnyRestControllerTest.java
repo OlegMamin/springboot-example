@@ -27,11 +27,7 @@ public class AnyRestControllerTest {
 
     @Test
     public void getFreeContractsRest() throws Exception {
-        Mockito.when(dashboardService.getContractsByClientId(1))
-                .thenReturn(Arrays.asList());
 
-        List<Contract> contracts = controller.getContractsRest(1);
-        Mockito.verify(dashboardService).getContractsByClientId(1);
     }
 
 }
