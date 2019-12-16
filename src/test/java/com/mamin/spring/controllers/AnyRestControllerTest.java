@@ -30,7 +30,7 @@ public class AnyRestControllerTest {
         Mockito.when(dashboardService.getContractsByClientId(1))
                 .thenReturn(Arrays.asList());
 
-        List<Contract> contracts = dashboardService.getContractsByClientId(1);
+        List<Contract> contracts = controller.getContractsRest(1);
         Mockito.verify(dashboardService).getContractsByClientId(1);
     }
 
